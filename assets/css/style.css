@@ -6,18 +6,25 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: grey;
+  background-color: rgb(59, 56, 56);
   font-family: 'Open sans', sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
 }
 
+h1{
+  text-align: center;
+  text-shadow: 1px 1px 1px grey;
+  font-weight: 500;
+}
+
 .container{
-  max-width: 640px;
-  margin: 50px auto;
+  max-width: 440px;
+  margin: 110px auto;
   background: #fff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 3px;
+  box-shadow: 1px 0px 1px;
 }
 
 .calculadora{
@@ -25,12 +32,15 @@ body{
 }
 
 .display{
-  font-size: 2em;
+  font-size: 1.8em;
   width: 100%;
   text-align: right;
+  box-shadow: 1px 1px 1px;
+  margin-bottom: 8px;
 }
 
 .btn{
+  background-color: rgba(59, 56, 56, 0.452);
   width: 100%;
   height: 40px;
   font-size: 1em;
@@ -38,6 +48,47 @@ body{
   cursor: pointer;
 }
 
-.btn:hover{
-  background-color: rgba(0, 0, 0, 0.418);
+.btn:active{
+  background-color: rgba(0, 0, 0, 0.589);
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%;
+    margin: 180px auto;
+    padding: 15px;
+  }
+
+  .calculadora {
+    width: 100%;
+  }
+
+  .display {
+    font-size: 1.5em;
+  }
+
+  .btn {
+    height: 35px;
+    font-size: 0.9em;
+    color: black;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .display {
+    font-size: 1.3em;
+  }
+
+  .btn {
+    height: 30px;
+    font-size: 0.8em;
+  }
 }
